@@ -103,16 +103,23 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'restfulapiDB',
-        'USER': 'postgres',
-        'PASSWORD': 'ms7724ms',  # config('DB_PASSWORD'),
-        'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'restfulapiDB',
+#         'USER': 'postgres',
+#         'PASSWORD': config('DB_PASSWORD'),
+#         'HOST': 'localhost',
+#     }
+# }
 
 
 # Password validation
